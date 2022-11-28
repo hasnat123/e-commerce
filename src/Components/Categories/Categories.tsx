@@ -16,7 +16,7 @@ import Dresses from './Components/Dresses/Dresses';
 const Categories: React.FC<{dresses: string | null}> = ({dresses}) => {
 
   const [activeBox, setActiveBox] = useState<string | null>(null);
-  const [active, setActive] = useState<boolean>(true);
+  const [active, setActive] = useState<boolean>(false);
 
   const HandleHoverEnter = (e: React.MouseEvent<HTMLElement>): void =>
   {
