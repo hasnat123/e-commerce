@@ -1,0 +1,46 @@
+footer
+{
+    position: absolute;
+    width: 100%;
+    margin-top: 330rem;
+    padding: 0 20rem;
+    color: #fff;
+    background: #2D2D2D;
+
+    .inner
+    {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 3rem 0;
+
+        .footer-section
+        {
+            ul
+            {
+                span
+                {
+                    text-transform: uppercase;
+                    font-size: 0.825rem;
+                    font-weight: 600;
+                }
+                li
+                {
+                    margin-top: 1.2rem;
+                    font-size: 0.75rem;
+                    cursor: pointer;
+                }
+                list-style: none;
+            }
+        } 
+    }
+
+
+    #footer-bar
+    {
+        padding: 1.5rem 0rem;
+        font-size: 0.75rem;
+        border-top: 1px solid #fff;
+    }
+    
+}

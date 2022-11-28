@@ -1,0 +1,42 @@
+.section
+{
+    &.section-new
+    {
+        .container
+        {
+            height: auto;
+            width: 101.225%;
+
+            .carousel
+            {
+                width: 100vw;
+                height: 100%;
+                justify-content: space-between;
+
+                .item
+                {
+                    width: 94.75%;
+                    height: 56vh;
+                    span
+                    {
+                        font-size: 1.3rem;
+
+                        &:first-of-type
+                        {
+                            font-weight: 600;
+                        }
+                    }
+
+                    img
+                    {
+                        height: 100%;
+                        width: 100%;
+                    }
+
+                }
+            }
+
+
+        }
+    }
+}

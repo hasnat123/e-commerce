@@ -1,0 +1,358 @@
+.navbar
+{
+    @include alignment(flex, center, center, row, auto, auto);
+
+    background: #1a1a1a;
+    padding: 0 1.75rem;
+
+    .navbar-inner
+    {
+        @include alignment(flex, space-between, center, row, 100%, auto);
+        position: relative;
+        max-width: 75rem;
+
+        .navbar-logo
+        {
+            margin-right: 1.35rem;
+            color: #fff;
+            font-size: 1.85rem;
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.1rem;
+        }
+
+        .gender-list
+        {
+            list-style: none;
+            display: flex;
+        
+            .gender-list-item
+            {
+                @include alignment(flex, center, center, row, 6.5rem, 4.75em);
+
+                font-size: 0.75rem;
+                font-weight: 700;
+                color: #fff;
+                letter-spacing: 0.125rem;
+                border-left: 1px #2b2a2a solid;
+                border-right: 1px #2b2a2a solid;
+                cursor: pointer;
+
+                &:hover
+                {
+                    background: #333233;
+                }
+            
+                &.active
+                {
+                    background: #2b2a2a;
+                }
+            }
+
+            a
+            {
+                &:first-child
+                {
+                    li
+                    {
+                        border-right: none;
+                    }
+                }
+            }
+        }
+
+        .navbar-search-container
+        {
+            @include alignment(flex, center, center, row, 100%, 100%);
+
+            position: relative;
+            margin: 0 0 0 1.75rem;
+
+            .navbar-search
+            {
+                width: 100%;
+                height: 100%;
+                border: none;
+                padding: 0.65rem 1rem;
+                font-size: 0.75rem;
+                letter-spacing: 0.5px;
+                border-radius: 20px;
+
+                &:focus
+                {
+                    outline: none;
+                }
+            }
+
+            .navbar-search-btn
+            {
+                position: absolute;
+                z-index: 1;
+                right: 0;
+                background-color: transparent;
+                border: none;
+                color: var(--main-font-color-dark);
+                cursor: pointer;
+                font-size: clamp(1rem, 1.3vw, 1.2rem);
+                padding: 1px 0.6rem;
+                transition: color 0.4s;
+
+                &.mobile
+                {
+                    display: block;
+                    position: relative;
+                    padding: 0;
+                    z-index: 0;
+                    font-size: clamp(20px, 5.5vw, 25px);
+                    transform: translateY(3px);
+                    color: #fff;
+                }
+            }
+        }
+
+        .navbar-search-container-mobile
+        {
+           display: none;
+
+            .navbar-search
+            {
+                display: none;
+            }
+        }
+        
+        .navbar-search-btn.mobile
+        {
+            display: none;
+        }
+
+    }
+
+    .user-list
+    {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .user-list-item
+        {
+            font-size: 1.3rem;
+            color: #fff;
+            padding: 0 0.9rem;
+            cursor: pointer;
+
+            &:first-child
+            {
+                position: relative;
+                padding-left: 1.75rem;
+
+                .account-dropdown
+                {
+                    position: absolute;
+                    z-index: -1;
+                    width: 325px;
+                    right: -107px;
+                    top: 47px;
+                    background: #fff;
+                    transform: translateY(-101%);
+                    transition: transform 0.3s;
+                
+                    .header
+                    {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 0.55rem 0.75rem;
+                        background: #eee;
+                        color: #383838;
+                        font-size: 0.85rem;
+                        cursor: default;
+                    
+                        .sign-in
+                        {
+                            cursor: pointer;
+                            span
+                            {
+                                cursor: default;
+                                margin: 0 0.5rem;
+                            }
+                        }
+                    
+                        .header-close
+                        {
+                            font-size: 1.75rem;
+                            cursor: pointer;
+                            color: #2d2d2d;
+                        }
+                    }
+                
+                    .account-dropdown-list
+                    {
+                        list-style: none;
+                        font-size: 0.8rem;
+                        color: #2d2d2d;
+                    
+                        .account-dropdown-list-item
+                        {
+                            display: flex;
+                            align-items: center;
+                            padding: 0.85rem 1.3rem;
+                        
+                            span
+                            {
+                                display: flex;
+                                justify-content: center;
+                                font-size: 1.15rem;
+                                width: 1.5rem;
+                                margin-right: 0.8rem;
+                            }
+
+                            &:hover
+                            {
+                                background: #eee;
+                            }
+                        }
+                    }
+                
+                }
+            
+                &::before
+                {
+                    content: "";
+                    position: absolute;
+                    right: 11px;
+                    bottom: -16px;
+                    border-right: 15px solid transparent;
+                    border-left: 15px solid transparent;
+                    border-bottom: 11px solid #eee;
+                    opacity: 0;
+                    transition: opacity 0.3s;
+                    cursor: default;
+                }
+            
+                &:hover:before
+                {
+                    opacity: 1;
+                }
+
+                &:hover > .account-dropdown
+                {
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+
+}
+
+
+
+@media screen and (max-width: 1023px)
+{
+    .navbar
+    {
+        padding: 0.425rem 1.75rem;
+        .navbar-inner
+        {
+            .gender-list{
+                display: none;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 800px)
+{
+    
+    .navbar
+    {
+        position: relative;
+
+        .navbar-inner
+        {
+            .navbar-logo
+            {
+                font-size: clamp(1.5rem, 7vw, 2.5rem);
+                
+            }
+
+            .navbar-search-container
+            {
+                display: none;
+            }
+
+            .navbar-search-container-mobile
+            {
+                display: flex;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                color: #fff;
+                background: #121212;
+                transform: translateY(-100%);
+                opacity: 0;
+                transition-property: opacity, transform;
+                transition-duration: 0.25s;
+
+                &.open
+                {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+
+                .navbar-search
+                {
+                    display: block;
+                    font-size: clamp(0.9rem, 5vw, 1.1rem);
+                    width: 85%;
+                    padding: 0.75rem 1.5rem;
+                    color: #fff;
+                    background: #121212;
+                    outline: none;
+                    border: none;
+                }
+
+                .mobile-search
+                {
+                    display: block;
+                    font-size: clamp(20px, 5.5vw, 25px);
+                    margin: auto;
+                }
+            }
+
+            .navbar-search-btn.mobile
+            {
+                display: block;
+                position: relative;
+                padding: 0;
+                z-index: 0;
+                font-size: clamp(20px, 5.5vw, 25px);
+                transform: translateY(3px);
+                color: #fff;
+                background: transparent;
+                border: none;
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,12 @@
+.announcement
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 3.5rem;
+    background: #ddd;
+    font-weight: 900;
+    z-index: -2;
+}

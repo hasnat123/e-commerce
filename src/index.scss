@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+@mixin alignment($display, $justify-content, $align-items, $flex-direction, $width, $height)
+{
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $flex-direction;
+    width: $width;
+    height: $height;
+}
+
+*,
+*::before,
+*::after
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+:root
+{
+    --logo-font: "Poppins", sans-serif;
+    --main-font: "Source Sans Pro", sans-serif;
+    --body-font: 'Nunito', sans-serif;
+    --main-font-color-dark: #262626;
+    --nav-font-color: rgb(255, 255, 255);
+    --body-font-color: #515151;
+    --hover-color: #FEDB00;
+}
+
+html
+{
+    font-family: var(--body-font);
+    font-size: 1.1rem;
+    color: var(--main-font-color-dark);
+    scroll-behavior: smooth; /*Used so that clicking 'page up' button causes scrolling animation instead of jumping up*/
+}
+
+body
+{
+    overflow-x: hidden;
+    background: #fff;
+}
+
+
+/*Routes*/
+
+//Home Page
+@import './Routes/Home/Home';
+
+
+//Men's Page
+@import './Routes/MensPage/MensPage';
+
+//Women's Page
+@import './Routes/WomensPage/WomensPage';
+
+//Navbar
+@import './Components/Navbar/Navbar';
+
+//Categories
+@import './Components/Categories/Categories';
+
+//Shop Gender
+@import './Components/PageContents/PageContents';
+
+/*Page Components*/
+
+//Strip Bar
+@import './Components/PageContents/Components/StripBar/StripBar';
+
+//Hero
+@import './Components/PageContents/Components/Hero/Hero';
+
+//Section Category
+@import './Components/PageContents/Components/SectionCategory/SectionCategory';
+
+//Section New
+@import './Components/PageContents/Components/SectionNew/SectionNew';
+
+//Hero Two
+@import './Components/PageContents/Components/HeroTwo/HeroTwo';
+
+//Section Brands
+@import './Components/PageContents/Components/SectionBrands/SectionBrands';
+
+//Section Discover
+@import './Components/PageContents/Components/SectionDiscover/SectionDiscover';
+
+//Section Store Info
+@import './Components/PageContents/Components/SectionStoreInfo/SectionStoreInfo';
+
+/*Home Page*/
+
+//Section Home Category
+@import './Routes/Home/Components/HomeSectionCategory/HomeSectionCategory';
+
+//Footer
+@import './Components/Footer/Footer';

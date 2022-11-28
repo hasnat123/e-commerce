@@ -1,0 +1,83 @@
+.categories
+{
+    @include alignment(flex, center, center, row, 100%, auto);
+
+    position: absolute;
+    top: 3.607rem;
+    z-index: -2;
+    color: #fff;
+    background: #2b2a2a;
+    font-size: 0.75rem;
+    letter-spacing: 0.05rem;
+    padding: 0 1.5rem;   
+    .categories-list
+    {
+        display: flex;
+        width: 100%;
+        max-width: 75rem;
+        list-style: none;
+
+        .categories-list-item
+        {
+            @include alignment(flex, center, center, row, auto, 2.85rem);
+
+            padding: 0 0.6rem;
+            cursor: default;
+            
+            &.active
+            {
+                background: #fff;
+                color: #2d2d2d;
+                font-weight: 600;
+            }
+
+            &.active > #sale
+            {
+                background: transparent;
+            }
+
+            #sale
+            {
+                @include alignment(flex, center, center, row, 100%, 100%);
+                
+                background: var(--hover-color);
+                transform: skew(-12deg);
+                padding: 0 14px;
+                height: 102%;
+                color: #2d2d2d;
+
+                span
+                {
+                    transform: skew(12deg);
+                    font-weight: 600;
+                }
+
+            }
+        }
+    }
+
+    .categories-box
+    {
+        display: none;
+        position: absolute;
+        width: 72.5%;
+        height: auto;
+        background: #fff;
+        top: 2.85rem;
+        padding: 1.75rem 1rem;
+        color: var(--main-font-color-dark);
+        
+        &.active
+        {
+            display: block;
+        }
+    }
+}
+
+@import './Components/Sale/Sale';
+@import './Components/NewIn/NewIn';
+@import './Components/Shoes/Shoes';
+@import './Components/SportsWear/SportsWear';
+@import './Components/Accessories/Accessories';
+@import './Components/Outlet/Outlet';
+

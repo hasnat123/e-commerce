@@ -1,0 +1,58 @@
+.section
+{
+    &.section-discover
+    {
+        .container
+        {
+            height: 85vh;
+            .item
+            {
+                cursor: auto;
+
+                .description
+                {
+                    margin-top: 0.75rem;
+                    height: 24vh;
+
+                    span 
+                    {
+                        font-weight: 600;
+                    }
+                    p
+                    {
+                        margin: 1rem 0;
+                    }
+
+                    div
+                    {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 0rem;
+
+
+
+                        span
+                        {
+                            margin-right: 0.85rem;
+                            cursor: pointer;
+
+                            &:hover ~ svg
+                            {
+                                opacity: 1;
+                                transform: translateX(0);
+                            }
+                        }
+                        
+                        svg
+                        {
+                            font-size: 1.25rem;
+                            opacity: 0;
+                            transform: translateX(-50%);
+                            transition: transform 0.3s, opacity 0.3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

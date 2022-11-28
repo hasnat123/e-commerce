@@ -1,0 +1,99 @@
+.section
+{
+    &.section-store-info
+    {
+        width: 79.5%;
+        margin: auto;
+        .container
+        {
+            height: 42vh;
+            .item
+            {
+                padding: 1.7rem 1.1rem;
+                font-size: 0.75rem;
+                text-align: center;
+                color: #fff;
+                background: #2D2D2D;
+                width: 32.25%;
+
+                .inner
+                {
+                    height: 85%;
+                    width: 100%;
+                }
+                img
+                {
+                    margin: 0.75rem 0;
+                    object-fit: contain;
+                    height: 50%;
+                }
+
+                span
+                {
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                }
+
+                
+                .navbar-search-container
+                {
+                    @include alignment(flex, center, center, row, 100%, 100%);
+        
+                    position: relative;
+                    background: #ddd;
+                    height: auto;
+                    margin-top: 1.5rem;
+                    .navbar-search
+                    {
+                        width: 100%;
+                        height: 3rem;
+                        border: none;
+                        padding: 0.65rem 1rem;
+                        font-size: 0.75rem;
+                        letter-spacing: 0.5px;
+        
+                        &:focus
+                        {
+                            outline: none;
+                        }
+                    }
+        
+                    .navbar-search-btn
+                    {
+                        position: absolute;
+                        z-index: 1;
+                        right: 0;
+                        background-color: transparent;
+                        border: none;
+                        color: var(--main-font-color-dark);
+                        cursor: pointer;
+                        font-size: clamp(1rem, 1.3vw, 1.2rem);
+                        padding: 1px 0.6rem;
+                        transition: color 0.4s;
+        
+                        &:hover
+                        {
+                           color: var(--hover-color);
+                        }
+        
+                        &.mobile
+                        {
+                            display: block;
+                            position: relative;
+                            padding: 0;
+                            z-index: 0;
+                            font-size: clamp(20px, 5.5vw, 25px);
+                            transform: translateY(3px);
+                            color: #fff;
+                        }
+                    }
+                }
+                p
+                {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}
